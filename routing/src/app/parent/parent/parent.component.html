@@ -1,0 +1,23 @@
+<div>
+  <p *ngIf="name">
+    {{name}}
+  </p>
+  <p *ngIf="title">
+    {{title}}
+  </p>
+</div>
+
+<div>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/parent/myparent" routerLinkActive="active">MyParent</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/parent/myparent2" routerLinkActive="active">My Parent2</a>
+  </li>
+  <p>parent works!</p>
+  <router-outlet></router-outlet>
+</div>
+
+<button [routerLink]="['/login']" queryParamsHandling="preserve">Home</button>
+<button [routerLink]="['',{outlets:{pop:'child'}}]" queryParamsHandling="preserve">Child</button>
+<button [routerLink]="['',{outlets:{pop:null}}]">Vanish</button>

@@ -1,0 +1,8 @@
+<button [routerLink]="['/parent']" [queryParams]="{Name : 'Souvik' , Title: 'Das'}" >parent</button>
+<button [routerLink]="[{outlets:{pop:'child'}}]">child</button>
+<div style="margin-left: auto;">
+  <button (click)="LogIn()">LogIn</button>
+  <button (click)="LogOut()">LogOut</button>
+</div>
+<a [routerLink]="['',{outlets:{primary:null}}]">Hide</a>
+

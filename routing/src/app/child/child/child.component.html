@@ -1,0 +1,11 @@
+
+<div>
+  <button [routerLink]="[{outlets:{pop:'mychild'}}]">MyChild</button>
+  <button [routerLink]="[{outlets:{pop:'mychild2'}}]">Mychild2</button>
+
+  <p>child works!</p>
+  <router-outlet name="pop"></router-outlet>
+</div>
+
+<button routerLink="/">Home</button>
+<button routerLink="/parent">Parent</button>
